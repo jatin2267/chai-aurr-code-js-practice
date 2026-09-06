@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Checker</title>
+</head>
+
+<body>
+
+    <input id="name" type="text" placeholder="Enter Your Name">
+
+    <input id="role" type="text" placeholder="Enter Your Role">
+
+    <button id="btn">Check Here</button>
+
+    <div id="result"></div>
+
+
+    <script>
+
+        // Employees ka data
+        const employers = [
+            {
+                name: "John Doe",
+                role: "Software Engineer",
+                salary: 80000
+            },
+            {
+                name: "Jane Smith",
+                role: "Data Analyst",
+                salary: 70000
+            },
+            {
+                name: "Michael Johnson",
+                role: "Project Manager",
+                salary: 90000
+            },
+            {
+                name: "Emily Davis",
+                role: "UX Designer",
+                salary: 75000
+            },
+            {
+                name: "David Wilson",
+                role: "DevOps Engineer",
+                salary: 85000
+            },
+            {
+                name: "Sarah Thompson",
+                role: "Product Manager",
+                salary: 95000
+            },
+            {
+                name: "Daniel Anderson",
+                role: "Frontend Developer",
+                salary: 78000
+            }
+        ];
+
+
+        // HTML elements ko select karna
+        const nameInput = document.getElementById("name");
+        const roleInput = document.getElementById("role");
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+
+        // Button click hone par
+        btn.addEventListener("click", function () {
+
+            // Input se name aur role lena
+            const name = nameInput.value;
+            const role = roleInput.value;
+
+
+            // Employee ko search karna
+            const employee = employers.find(function (person) {
+
+                return person.name === name && person.role === role;
+
+            });
+
+
+            // Agar employee mil gaya
+            if (employee) {
+
+                result.innerHTML = `
+                    <h2>Employee Found</h2>
+                    <p>Name: ${employee.name}</p>
+                    <p>Role: ${employee.role}</p>
+                    <p>Salary: ₹${employee.salary}</p>
+                `;
+
+            } else {
+
+                result.innerHTML = "Employee not found";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

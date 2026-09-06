@@ -32,4 +32,26 @@ let undefinedValue; // undefined
 let undefinedString = String(undefinedValue); // explicit conversion from undefined to string
 console.log(typeof undefinedString); // string
 
+// "33" => 33 // string to number
+
+// 33 => "33" // number to string
+
+// true => "true" // boolean to string
+
+// "true" => true // string to boolean
+
+// false => "false" // boolean to string
+
+// null => "null" // null to string
+
+// undefined => "undefined" // undefined to stringx
+
+// true => 1 // boolean to number
+
+// false => 0 // boolean to number
+
+// "1" => 1 // string to number
+
+// "0" => 0 // string to number
+
 
