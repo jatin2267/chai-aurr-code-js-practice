@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <input id="name" type="text" placeholder="Enter your name">
+
+    <input id="age" type="text" placeholder="Enter your age">
+
+    <input id="city" type="text" placeholder="Enter your city">
+
+    <label>
+        <input id="student" type="checkbox">
+        I am a student
+    </label>
+
+    <button id="submit">Submit</button>
+
+    <div id="result"></div>
+
+
+    <script>
+
+        // HTML elements ko pakad rahe hain
+        let nameInput = document.getElementById("name");
+        let ageInput = document.getElementById("age");
+        let cityInput = document.getElementById("city");
+        let studentInput = document.getElementById("student");
+        let submit = document.getElementById("submit");
+        let result = document.getElementById("result");
+
+
+        // Submit button par click hone ka wait
+        submit.addEventListener("click", function () {
+
+            // Input se actual data nikal rahe hain
+            let name = nameInput.value;
+            let age = ageInput.value;
+            let city = cityInput.value;
+
+            // Data conversion
+            name = String(name);
+            age = Number(age);
+
+            // Checkbox se true / false milega
+            let student = studentInput.checked;
+
+
+            // Current date and time
+            let date = new Date();
+
+
+            // Result screen par show karna
+            result.textContent =
+                `Name: ${name}
+Age: ${age}
+City: ${city}
+Student: ${student}
+Submitted: ${date.toLocaleString()}`;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

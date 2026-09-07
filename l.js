@@ -1,4 +1,8 @@
-let name = "Jatin";
-name = "Rahul";
+let avengers = ["thor" , "lockey" , "spiderman"];
 
-console.log(name);
+let dcheroes = ["superman" , "flash" , "batman"]
+
+avengers.push(...dcheroes);
+
+console.log(avengers);
+console.log(avengers [2] [3]);

@@ -12,8 +12,8 @@ let templateLiteralString = `Hello, World!`; // using backticks (template litera
 
 // Strings can contain letters, numbers, symbols, and whitespace characters.
 // Example of string concatenation:
-let firstName = "John";
-let lastName = "Doe";
+let Name = "John";
+let Names = "Doe";
 let fullName = firstName + " " + lastName;
 
 // Example of string interpolation using template literals:
@@ -47,4 +47,4 @@ console.log(str.indexOf("W")); // Output: 7
 // Example of string concatenation and interpolation:
 let firstName = "John";
 let lastName = "Doe";
-let age = 30;
+let ages = 30;
