@@ -12,3 +12,5 @@ console.log(mydate.toUTCString());  // Fri, 14 Jun 2024 12:34:56 GMT
 console.log(mydate.toISOString());  // 2024-06-14T12:34:56.789Z
 console.log(mydate.toJSON());  // 2024-06-14T12:34:56.789Z
 console.log(mydate.toGMTString());  // Fri, 14 Jun 2024 12:34:56 GMT
+
+//

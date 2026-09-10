@@ -1,8 +1,10 @@
-let avengers = ["thor" , "lockey" , "spiderman"];
+let object = {
+    name: "jatin",
+    age: 23,
+    city: "ludhiana",
+    email: "jatin@gmail.com",
+    inloggedin: true,
+    days: ["monday" , "wednesday" , "thursday" , "friday" , "saturday" , "sunday"]
 
-let dcheroes = ["superman" , "flash" , "batman"]
-
-avengers.push(...dcheroes);
-
-console.log(avengers);
-console.log(avengers [2] [3]);
+}
+console.log(object.city)
