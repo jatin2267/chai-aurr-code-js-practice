@@ -3,32 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>age check</title>
+    <title>Document</title>
 </head>
 <body>
-    <input id="num" type="number" placeholder="enter your age">
+    <input id="num" type="bunber" placeholder="enter your age">
     <button id="btn">click here</button>
-    <button id="btnn" onclick="nextpage()">next</button>
     <div id="result"></div>
-
-    <script>
-        let num = document.getElementById("num");
-        let btn = document.getElementById("btn");
-        let btnn = document.getElementById("btnn");
-        let result = document.getElementById("result");
-
-        btn.addEventListener("click", function(){
-            let age = num.value;
-            if(age >= 18){
-                result.textContent = "Eligible";
-            } else {
-                result.textContent = "Minor";
-            }
-        });
-
-        function nextpage(){
-            window.location.href = "https://www.youtube.com/watch?v=F2m4HPLvj-4&list=RDGMEMPipJmhsMq3GHGrfqf4WIqAVM6wkwmDzZ3n4&index=6";   // isi folder mein "page2.html" honi chahiye
-        }
-    </script>
 </body>
+<script>
+    let num = document.getElementById("num");
+     let btn = document.getElementById("btn");
+      let result = document.getElementById("result");
+      btn.addEventListener("click" , function(){
+        let age = num.value
+        if(age === "18"){
+            input.value ("you are minor")
+        }
+        else{
+            input.value("you are good")
+        }
+      })
+</script>
 </html>
