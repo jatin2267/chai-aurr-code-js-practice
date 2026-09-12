@@ -1,10 +1,26 @@
-let object = {
+let user1 = {
     name: "jatin",
-    age: 23,
-    city: "ludhiana",
-    email: "jatin@gmail.com",
-    inloggedin: true,
-    days: ["monday" , "wednesday" , "thursday" , "friday" , "saturday" , "sunday"]
-
+    id: 200,
+    job: "frontend-devloper",
 }
-console.log(object.city)
+let user2 = {
+    name: "mainsh",
+    id: 202,
+    job: "tester",
+}
+let user3 = {
+    name: "maddy",
+    id: 203,
+    job: "editor",
+}
+let user4 = {
+    name: "manik",
+    id: 204,
+    job: "editor",
+}
+let user5 = {
+    name: "manik sharma",
+    id: 205,
+    job: "editor",
+}
+

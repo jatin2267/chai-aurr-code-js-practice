@@ -1,7 +1,19 @@
-let num = ("10" + 20 + 30);
+const data = {
+    name: "jatin0",
+    id: 210,
+    product: "shoes",
+    price: 1000,
+}
+console.log(data.name)
 
-let age = (10 + "20");
+const {name} = data
+// console.log(name);
 
-console.log(num);
-console.log(age);
-console.log(10+20+"30")
+
+// data.name = "mainsh"
+// console.log(data);
+
+data.products = "nike"
+console.log(data);
+
+
