@@ -1,2 +1,2 @@
-console.log(name);
-const name = john
+var a = 33;
+console.log(a);

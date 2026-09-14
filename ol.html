@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: auto;
+      gap: 20px;
+    }
+    .box {
+      padding: 40px;
+      background: lightblue;
+      text-align: center;
+      transition: 0.3s ease;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      background: red;
+
+      left: 0;
+      bottom: -100%;
+
+      transition: 0.4s ease;
+    }
+
+    .box:hover::before {
+      bottom: 0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
