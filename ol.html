@@ -1,62 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin: auto;
-      gap: 20px;
-    }
-    .box {
-      padding: 40px;
-      background: lightblue;
-      text-align: center;
-      transition: 0.3s ease;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
 
-      position: relative;
-      overflow: hidden;
-    }
+<body>
 
-    .box::before {
-      content: "";
-      position: absolute;
+    <input id="name" type="text" placeholder="Enter Your Name">
+    <input id="age" type="text" placeholder="Enter Your Age">
 
-      width: 100%;
-      height: 100%;
+    <button id="btn">Login Here</button>
 
-      background: red;
+    <div id="result"></div>
 
-      left: 0;
-      bottom: -100%;
 
-      transition: 0.4s ease;
-    }
+    <script>
 
-    .box:hover::before {
-      bottom: 0;
-    }
-  </style>
-  <body>
-    <div class="container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-  </body>
+        // HTML ke elements ko pakad rahe hain
+        const nameInput = document.getElementById("name");
+        const ageInput = document.getElementById("age");
+        const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+
+        // Login button par click hone ka wait
+        btn.addEventListener("click", function() {
+
+            // Input se value nikal rahe hain
+            const userName = nameInput.value;
+            const userAge = Number(ageInput.value);
+
+
+            // Function call
+            loginUser(userName, userAge);
+
+        });
+
+
+        // Login ka function
+        function loginUser(name, age) {
+
+            result.innerHTML = `
+                Login Successful! <br>
+                Welcome ${name} <br>
+                Your Age is ${age}
+            `;
+
+        }
+
+    </script>
+
+</body>
 </html>

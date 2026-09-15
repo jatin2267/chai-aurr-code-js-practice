@@ -4,9 +4,9 @@ function one() {
 
     function two() {
 
-        const city = "ludhiana";
-
-        console.log(name); // ✅
+      const city = "ludhiana";
+      
+      console.log(name); // ✅
         console.log(city); // ✅
     }
 
