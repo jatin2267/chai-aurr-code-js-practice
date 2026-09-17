@@ -17,5 +17,5 @@ console.log(product( 10 , 29));  // 39 print without curly brace{}
 
 const subtract = (sub1 , sub2) => sub1 - sub2;
 
-console.log(subtract(200 , 488));
+console.log(subtract(200 , 488)); // -288 substract without parathese ()
  

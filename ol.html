@@ -1,56 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
 
-<body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <input id="name" type="text" placeholder="Enter Your Name">
-    <input id="age" type="text" placeholder="Enter Your Age">
+      .background {
+        position: relative;
+        min-height: 100vh;
 
-    <button id="btn">Login Here</button>
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    <div id="result"></div>
+        overflow: hidden;
+      }
 
+      /* Background Image */
+      .background::before {
+        content: "";
+        position: absolute;
+        inset: -20px;
+
+        background-image: url(cloud.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        filter: blur(8px);
+        z-index: -1;
+      }
+
+      /* Form */
+      form {
+        width: 350px;
+        padding: 30px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Inputs */
+      input {
+        width: 100%;
+        padding: 13px 15px;
+
+        border: none;
+        outline: none;
+        border-radius: 8px;
+
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 15px;
+      }
+
+      input:focus {
+        background: white;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+      }
+
+      /* Button */
+      button {
+        padding: 13px;
+
+        border: none;
+        border-radius: 8px;
+
+        background: #111;
+        color: white;
+
+        font-size: 16px;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #333;
+        transform: translateY(-2px);
+      }
+
+      #result {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background">
+
+      <form>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your name"
+        />
+
+        <input
+          id="num"
+          type="number"
+          placeholder="Enter your age"
+        />
+
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your Email"
+        />
+
+        <input
+          id="pass"
+          type="password"
+          placeholder="Password"
+        />
+
+        <input
+          id="pass2"
+          type="password"
+          placeholder="Confirm your password"
+        />
+
+        <button id="btn" type="button">
+          Login
+        </button>
+
+        <div id="result"></div>
+      </form>
+
+    </div>
 
     <script>
-
-        // HTML ke elements ko pakad rahe hain
-        const nameInput = document.getElementById("name");
-        const ageInput = document.getElementById("age");
-        const btn = document.getElementById("btn");
-        const result = document.getElementById("result");
-
-
-        // Login button par click hone ka wait
-        btn.addEventListener("click", function() {
-
-            // Input se value nikal rahe hain
-            const userName = nameInput.value;
-            const userAge = Number(ageInput.value);
+      // HTML elements ko select karna
+      const name = document.getElementById("name");
+      const num = document.getElementById("num");
+      const email = document.getElementById("email");
+      const pass = document.getElementById("pass");
+      const pass2 = document.getElementById("pass2");
+      const btn = document.getElementById("btn");
+      const result = document.getElementById("result");
 
 
-            // Function call
-            loginUser(userName, userAge);
+      // Button par click event
+      btn.addEventListener("click", function () {
 
-        });
+        // Input ki values lena
+        const userName = name.value;
+        const userAge = Number(num.value);
+        const userEmail = email.value;
+        const userPassword = pass.value;
+        const confirmPassword = pass2.value;
 
 
-        // Login ka function
-        function loginUser(name, age) {
+        // Console mein check karna
+        console.log(userName);
+        console.log(userAge);
+        console.log(userEmail);
+        console.log(userPassword);
+        console.log(confirmPassword);
 
-            result.innerHTML = `
-                Login Successful! <br>
-                Welcome ${name} <br>
-                Your Age is ${age}
-            `;
 
+        // Data types check karna
+        console.log(typeof userName);
+        console.log(typeof userAge);
+        console.log(typeof userEmail);
+
+
+        // Basic validation
+        if (userName === "") {
+          result.textContent = "Please enter your name";
         }
 
-    </script>
+        else if (userAge === 0 || isNaN(userAge)) {
+          result.textContent = "Please enter a valid age";
+        }
 
-</body>
+        else if (userEmail === "") {
+          result.textContent = "Please enter your email";
+        }
+
+        else if (userPassword === "") {
+          result.textContent = "Please enter your password";
+        }
+
+        else if (userPassword !== confirmPassword) {
+          result.textContent = "Passwords do not match";
+        }
+
+        else {
+          result.textContent = "Registration successful!";
+        }
+
+      });
+    </script>
+  </body>
 </html>
